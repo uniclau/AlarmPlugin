@@ -9,3 +9,4 @@ var alarmPlugin = {
         );
     }
 };
+module.exports = alarmPlugin;
