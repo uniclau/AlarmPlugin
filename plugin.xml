@@ -9,8 +9,8 @@
     <keywords>phonegap,alarm</keywords>
 
 
-    <js-module src="www/alarm.js" name="Alarm">
-        <clobbers target="window.alarm" />
+    <js-module src="www/alarmplugin.js" name="AlarmPlugin">
+        <clobbers target="window.alarmPlugin" />
     </js-module>
 
     <!-- android -->
