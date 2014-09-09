@@ -48,5 +48,7 @@
 
 
         <source-file src="src/android/AlarmPlugin.java" target-dir="src/com/uniclau/alarmplugin" />      
+        <source-file src="src/android/AlarmBoot.java" target-dir="src/com/uniclau/alarmplugin" />      
+        <source-file src="src/android/AlarmReceiver.java" target-dir="src/com/uniclau/alarmplugin" />      
      </platform>          
 </plugin>
