@@ -16,7 +16,7 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Alarm">
+            <feature name="AlarmPlugin">
                 <param name="android-package" value="com.uniclau.alarmplugin.AlarmPlugin"/>
             </feature>
         </config-file>
