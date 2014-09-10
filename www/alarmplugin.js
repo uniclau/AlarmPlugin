@@ -1,12 +1,15 @@
-var alarmPlugin = {
-    programAlarm: function(dAlarm, successCallback, errorCallback) {
+if(!navigator.plugins)
+    navigator.plugins = {};
+
+navigator.plugins.alarm = {
+    set: function(alarmDate, successCallback, errorCallback) {
         cordova.exec(
             successCallback,
             errorCallback,
             "AlarmPlugin",
             "programAlarm",
-            [dAlarm]
+            [alarmDate]
         );
     }
 };
-module.exports = alarmPlugin;
+module.exports = navigator.plugins.alarm;
