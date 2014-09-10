@@ -1,21 +1,22 @@
 AlarmPlugin
 ===========
 
-Alarm plugin for phonegap.
+Alarm plugin for Cordova/PhoneGap.
 
 To install the plugin:
 
-  cordova plugin add https://github.com/uniclau/AlarmPlugin
+    cordova plugins add https://github.com/uniclau/AlarmPlugin.git
 
-To call the plugin: 
+To invoke the plugin: 
 
-alarmPlugin.programAlarm(wakeupdate, onSucces, onError)
+    navigator.plugins.alarm.set(alarmDate, 
+    function(){
+      // SUCCESS
+    }, 
+    function(){
+      // ERROR
+    })
 
-Where wakedate (of type Date) is the date that the application will wake up. (Even if the device has been rebooted.
+```alarmDate``` is the date that the application will wake up. This will happen even if the device has been rebooted.
 
-onSucces is called if the alarm is setted ol.
-
-onError is called if an error has been produced.
-
-
-
+The second and third parameters are the callbacks to handle the success or failure of the call, respectively. 
