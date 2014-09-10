@@ -1,7 +1,4 @@
-if(!navigator.plugins)
-    navigator.plugins = {};
-
-navigator.plugins.alarm = {
+var alarm = {
     set: function(alarmDate, successCallback, errorCallback) {
         cordova.exec(
             successCallback,
@@ -12,4 +9,4 @@ navigator.plugins.alarm = {
         );
     }
 };
-module.exports = navigator.plugins.alarm;
+module.exports = alarm;
