@@ -10,7 +10,7 @@
 
 
     <js-module src="www/alarmplugin.js" name="AlarmPlugin">
-        <clobbers target="window.alarmPlugin" />
+        <clobbers target="navigator.plugins.alarm" />
     </js-module>
 
     <!-- android -->
