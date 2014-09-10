@@ -50,6 +50,12 @@ public class AlarmPlugin extends CordovaPlugin {
 				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
 				Date aDate = sdf.parse(args.getString(0).replace("Z", "+0000"));
 				
+				Date n = new Date();
+				if(aDate.before(n)) {
+					callbackContext.error("The date is in the past");
+					return true;
+				}
+				
 				SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this.cordova.getActivity());
 				SharedPreferences.Editor editor = settings.edit();
 	            editor.putLong("AlarmPlugin.AlarmDate", aDate.getTime()); //$NON-NLS-1$
