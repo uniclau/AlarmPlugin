@@ -9,6 +9,7 @@ import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
 import android.os.SystemClock;
 import android.util.Log;
+import android.os.Vibrator;
 
 public class AlarmReceiver extends BroadcastReceiver {
     @Override
@@ -25,6 +26,9 @@ public class AlarmReceiver extends BroadcastReceiver {
         KeyguardManager keyguardManager = (KeyguardManager)context.getSystemService(Context.KEYGUARD_SERVICE); 
         KeyguardLock keyguardLock =  keyguardManager.newKeyguardLock("TAG");
         keyguardLock.disableKeyguard();
+
+        Vibrator v = (Vibrator) this.context.getSystemService(Context.VIBRATOR_SERVICE);
+        v.vibrate(2000);
    
         intent = new Intent();
         intent.setAction("com.uniclau.alarmplugin.ALARM");
